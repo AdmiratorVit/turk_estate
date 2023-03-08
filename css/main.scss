@@ -558,7 +558,7 @@ template {
 }
 
 .txt_24 {
-  font-size: 24px;
+  font-size: 1.14rem;
 }
 
 .w80 {
@@ -580,7 +580,7 @@ body, html {
   font-weight: 300;
   font-size: 21px;
   line-height: 25px;
-  overflow-x: hidden;
+  //overflow-x: hidden;
 }
 
 .photo {
@@ -590,6 +590,10 @@ body, html {
 
 hr {
   border-top: none !important;
+}
+
+.main_fullwidth.footer:not(.index) {
+  padding: 20px 0;
 }
 
 .main_fullwidth {
@@ -696,6 +700,152 @@ hr {
   }
 }
 
+
+.block_1, .block_4 {
+  & .slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  & .slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  & .slick-list:focus {
+    outline: none;
+  }
+
+  & .slick-list.dragging {
+    cursor: hand;
+  }
+
+  & .slick-slider .slick-track, .slick-slider .slick-list {
+    transform: translate3d(0, 0, 0);
+  }
+
+  & .slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+  }
+
+  & .slick-track:before, .slick-track:after {
+    display: table;
+    content: '';
+  }
+
+  & .slick-track:after {
+    clear: both;
+  }
+
+  & .slick-loading .slick-track {
+    visibility: hidden;
+  }
+
+  & .slick-slide {
+    display: none;
+    float: left;
+    //height: 100%;
+    min-height: 1px;
+  }
+
+  & .slick-slide img {
+    display: block;
+  }
+
+  & .slick-slide.slick-loading img {
+    display: none;
+  }
+
+  & .slick-slide.dragging img {
+    pointer-events: none;
+  }
+
+  & .slick-initialized .slick-slide {
+    display: block;
+  }
+
+  & .slick-loading .slick-slide {
+    visibility: hidden;
+  }
+
+  & .slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+  }
+
+  & .slick-btn.slick-hidden {
+    display: none;
+  }
+
+  & .slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus, {
+    color: transparent;
+    outline: none;
+  }
+
+  & .slick-prev:hover:before, .slick-prev:focus:before, .slick-next:hover:before, .slick-next:focus:before {
+    opacity: 0;
+  }
+
+  & .slick-prev:before, .slick-next:before {
+    font-family: "FontAwesome";
+    font-size: 40px;
+    line-height: 1;
+    color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  & .slick-prev:before {
+    //content: "";
+  }
+
+  & .slick-next:before {
+    content: "\f178";
+  }
+  & .slick-prev,
+  & .slick-next{
+    top: -81px;
+    right: 88px;
+    cursor: pointer;
+    position: absolute;
+    width: 71px;
+    height: 71px;
+    line-height: 0;
+    font-size: 25px;
+    border-radius: 50px;
+    //top: -81px;
+    display: block;
+    transform: translate(0, -50%);
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+    margin-left: 52px;
+    padding: 15px 18px;
+    text-align: center;
+  }
+
+  & .slick-next {
+    right: 0;
+  }
+}
+
 .sign {
   background-image: url("/images/sign.png");
   height: 81px;
@@ -740,7 +890,7 @@ hr {
 
   & .title.index {
     font-weight: 700;
-    font-size: 48px;
+    font-size: 2.28rem;
     line-height: 110%;
     color: #212225;
     margin-top: 161px;
@@ -749,7 +899,7 @@ hr {
 
   & .title.index h2 {
     font-weight: 700;
-    font-size: 48px;
+    font-size: 2.28rem;
     line-height: 110%;
 
   }
@@ -768,7 +918,7 @@ hr {
 
 .garant {
   font-weight: 700;
-  font-size: 18px;
+  font-size: 0.86rem;
   line-height: 150%;
   text-transform: uppercase;
   max-width: 600px;
@@ -776,7 +926,7 @@ hr {
 
   & + .text {
     max-width: 600px;
-    font-size: 18px;
+    font-size: 0.86rem;
     line-height: 150%;
     text-transform: none;
     margin-top: 27px;
@@ -805,7 +955,7 @@ hr {
 
 .fio {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 0.86rem;
   line-height: 150%;
   display: flex;
   align-items: center;
@@ -816,7 +966,7 @@ hr {
 
 .ceo {
   font-weight: 300;
-  font-size: 14px;
+  font-size: 0.667rem;
   line-height: 150%;
   margin-top: 8px;
 }
@@ -838,20 +988,20 @@ hr {
 
   & .title {
     font-weight: 700;
-    font-size: 48px;
+    font-size: 2.28rem;
     line-height: 110%;
     margin-bottom: 10px;
   }
 
   & .title h2 {
     font-weight: 700;
-    font-size: 48px;
+    font-size: 2.28rem;
     line-height: 110%;
   }
 
   & .subtitle {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 0.86rem;
     line-height: 150%;
     text-transform: uppercase;
     margin-bottom: 32px;
@@ -865,13 +1015,13 @@ hr {
     & .wa {
       width: 41%;
       font-weight: 200;
-      font-size: 18px;
+      font-size: 0.86rem;
     }
 
     & .send {
       height: 94px;
       padding: 0 63px;
-      font-size: 16px;
+      font-size: 0.76rem;
     }
 
     & input {
@@ -880,7 +1030,7 @@ hr {
       border-radius: 12px;
       width: 100%;
       outline: none;
-      font-size: 20px;
+      font-size: 0.95rem;
       padding-left: 20px;
     }
   }
@@ -906,7 +1056,7 @@ hr {
   & .checkboxes {
     display: flex;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 0.76rem;
     line-height: 120%;
     flex-wrap: wrap;
     height: 82px;
@@ -938,7 +1088,7 @@ hr {
 
   & .cases {
     font-weight: 300;
-    font-size: 22px;
+    font-size: 1.05rem;
     line-height: 150%;
   }
 
@@ -971,7 +1121,7 @@ hr {
 
     & .title {
       font-weight: 700;
-      font-size: 70px;
+      font-size: 3.33rem;
       line-height: 150%;
       display: flex;
       align-items: center;
@@ -980,7 +1130,7 @@ hr {
 
     & .title h2 {
       font-weight: 700;
-      font-size: 70px;
+      font-size: 3.33rem;
       line-height: 150%;
     }
 
@@ -988,24 +1138,24 @@ hr {
       font-family: 'Philosopher-Regular', serif;
       font-style: normal;
       font-weight: 700;
-      font-size: 70px;
+      font-size: 3.33rem;
       line-height: 150%;
     }
 
     & .text {
       font-weight: 300;
-      font-size: 16px;
+      font-size: 0.76rem;
       line-height: 150%;
     }
   }
 
   & .subtitle {
     font-weight: 700;
-    font-size: 22px;
+    font-size: 1.05rem;
     line-height: 150%;
     text-align: center;
     text-transform: uppercase;
-    width: 950px;
+    //width: 950px;
     margin: 0 auto 49px;
   }
 
@@ -1017,7 +1167,7 @@ hr {
   & .send {
     height: 94px;
     padding: 0 63px;
-    font-size: 16px;
+    font-size: 0.76rem;
   }
 
   & .button {
@@ -1079,26 +1229,26 @@ hr {
 
       & .name {
         font-weight: 500;
-        font-size: 24px;
+        font-size: 1.14rem;
         line-height: 140%;
       }
 
       & .status {
         font-weight: 300;
-        font-size: 16px;
+        font-size: 0.76rem;
         line-height: 150%;
       }
 
       & .task {
         font-weight: 400;
-        font-size: 20px;
+        font-size: 0.95rem;
         line-height: 140%;
         margin-bottom: 15px;
       }
 
       & .task_result {
         font-weight: 300;
-        font-size: 14px;
+        font-size: 0.67rem;
         line-height: 150%;
       }
     }
@@ -1107,7 +1257,7 @@ hr {
 
 .old {
   font-weight: 700;
-  font-size: 16px;
+  font-size: 0.76rem;
   line-height: 130%;
 }
 
@@ -1115,7 +1265,7 @@ hr {
   & .send {
     height: 94px;
     padding: 0 63px;
-    font-size: 16px;
+    font-size: 0.76rem;
   }
 
   & .b5_pic1 {
@@ -1145,7 +1295,7 @@ hr {
 
   & .title {
     font-weight: 700;
-    font-size: 48px;
+    font-size: 2.28rem;
     line-height: 110%;
     text-align: center;
     max-width: 785px;
@@ -1154,14 +1304,14 @@ hr {
 
   & .title h2 {
     font-weight: 700;
-    font-size: 48px;
+    font-size: 2.28rem;
     line-height: 110%;
   }
 
   & .sub_title {
     font-style: normal;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 1.05rem;
     line-height: 150%;
   }
 
@@ -1170,7 +1320,7 @@ hr {
     width: 100%;
     margin-top: 83px;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 0.86rem;
     line-height: 150%;
     text-align: center;
     margin-bottom: 39px;
@@ -1206,8 +1356,8 @@ hr {
   & a {
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 0.76rem;
+    line-height: 0.95rem;
     color: white;
     text-decoration: none !important;
   }
@@ -1215,7 +1365,7 @@ hr {
 
   & .wrapper_top {
     font-weight: 700;
-    font-size: 48px;
+    font-size: 2.28rem;
     line-height: 110%;
     font-family: 'Philosopher-Regular', serif;
     font-style: normal;
@@ -1226,7 +1376,7 @@ hr {
 
   & .wrapper_top h2 {
     font-weight: 700;
-    font-size: 48px;
+    font-size: 2.28rem;
     line-height: 110%;
     font-family: 'Philosopher-Regular', serif;
     font-style: normal;
@@ -1236,7 +1386,7 @@ hr {
     font-family: 'TT Norms', serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 0.86rem;
     line-height: 150%;
     display: flex;
     align-items: center;
@@ -1255,7 +1405,7 @@ hr {
   }
 
   & .wrapper_bottom {
-    font-size: 18px;
+    font-size: 0.86rem;
     max-width: 900px;
     text-align: center;
   }
@@ -1290,7 +1440,7 @@ hr {
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
-    line-height: 50px;
+    line-height: 2.14rem;
     display: flex;
     align-items: center;
     color: #FFFFFF;
@@ -1308,7 +1458,7 @@ hr {
     display: flex;
     align-items: center;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 0.667rem;
     line-height: 150%;
     margin-top: 19px;
     text-decoration: none !important;
@@ -1330,14 +1480,14 @@ hr {
       }
     }
   }
-
-  & #b_keys, #b_invest, #b_stay, #b_rassr, #b_done, #b_kotlovan {
+  
+  & #b_keys_index, #b_invest_index, #b_stay_index, #b_rassr_index, #b_done_index, #b_kotlovan_index {
     border-radius: 6px;
     padding: 7px 13px;
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 0.76rem;
+    line-height: 0.95rem;
     display: flex;
     align-items: center;
     height: 32px;
@@ -1367,7 +1517,7 @@ hr {
     font-family: 'Philosopher-Regular', serif;
     font-style: italic;
     font-weight: 400;
-    font-size: 48px;
+    font-size: 2.28rem;
     line-height: 130%;
     text-transform: uppercase;
     color: #CBB47A;
@@ -1408,7 +1558,7 @@ hr {
     font-family: 'Philosopher-Regular', serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 2.28rem;
     line-height: 130%;
     margin-bottom: 30px;
   }
@@ -1417,7 +1567,7 @@ hr {
     font-family: 'Philosopher-Regular', serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 2.28rem;
     line-height: 130%;
   }
 
@@ -1454,7 +1604,7 @@ hr {
       font-family: 'TT Norms', serif;
       font-style: normal;
       font-weight: 400;
-      font-size: 24px;
+      font-size: 1.14rem;
       line-height: 140%;
       text-align: center;
       margin-top: 72px;
@@ -1464,14 +1614,14 @@ hr {
       font-family: 'TT Norms', serif;
       font-style: normal;
       font-weight: 400;
-      font-size: 24px;
+      font-size: 1.14rem;
       line-height: 140%;
     }
 
     & .send {
       height: 94px;
       padding: 0;
-      font-size: 16px;
+      font-size: 0.76rem;
       width: 100%;
       font-weight: 400;
     }
@@ -1480,7 +1630,7 @@ hr {
       font-family: 'TT Norms', serif;
       font-style: normal;
       font-weight: 400;
-      font-size: 18px;
+      font-size: 0.86rem;
       line-height: 130%;
       align-items: center;
       text-align: center;
@@ -1494,7 +1644,7 @@ hr {
       border-radius: 12px;
       width: 100%;
       outline: none;
-      font-size: 20px;
+      font-size: 0.95rem;
       padding-left: 20px;
     }
 
@@ -1505,7 +1655,7 @@ hr {
 
   & .text {
     font-weight: 500;
-    font-size: 16px;
+    font-size: 0.76rem;
     line-height: 150%;
 
     &.right {
@@ -1521,7 +1671,7 @@ hr {
       font-family: 'Philosopher-Regular', serif;
       font-style: normal;
       font-weight: 400;
-      font-size: 48px;
+      font-size: 2.28rem;
       line-height: 110%;
     }
 
@@ -1529,20 +1679,20 @@ hr {
       font-family: 'Philosopher-Regular', serif;
       font-style: normal;
       font-weight: 400;
-      font-size: 48px;
+      font-size: 2.28rem;
       line-height: 110%;
     }
 
     & .sub_title {
       font-weight: 400;
-      font-size: 22px;
+      font-size: 1.05rem;
       line-height: 150%;
       width: 90%;
     }
 
     & .cashback {
       font-weight: 700;
-      font-size: 18px;
+      font-size: 0.86rem;
       line-height: 150%;
       margin-top: 48px;
       margin-bottom: 20px;
@@ -1550,7 +1700,7 @@ hr {
 
     & .coupon {
       font-weight: 400;
-      font-size: 16px;
+      font-size: 0.76rem;
       line-height: 150%;
       color: #000000;
       opacity: 0.3;
@@ -1559,7 +1709,7 @@ hr {
 
     & .text {
       font-weight: 500;
-      font-size: 18px;
+      font-size: 0.86rem;
       line-height: 150%;
       color: rgba(0, 0, 0, 0.7);
     }
@@ -1572,13 +1722,13 @@ hr {
       & .wa {
         width: 41%;
         font-weight: 200;
-        font-size: 18px;
+        font-size: 0.86rem;
       }
 
       & .send {
         height: 94px;
         padding: 0 63px;
-        font-size: 16px;
+        font-size: 0.76rem;
       }
 
       & input {
@@ -1587,7 +1737,7 @@ hr {
         border-radius: 12px;
         width: 100%;
         outline: none;
-        font-size: 20px;
+        font-size: 0.95rem;
         padding-left: 20px;
       }
     }
@@ -1610,13 +1760,13 @@ hr {
     & .wa {
       width: 330px;
       font-weight: 200;
-      font-size: 18px;
+      font-size: 0.86rem;
     }
 
     & .send {
       height: 94px;
       padding: 0 63px;
-      font-size: 16px;
+      font-size: 0.76rem;
     }
 
     & input {
@@ -1625,7 +1775,7 @@ hr {
       border-radius: 12px;
       width: 100%;
       outline: none;
-      font-size: 20px;
+      font-size: 0.95rem;
       padding-left: 20px;
     }
   }
@@ -1654,7 +1804,7 @@ hr {
 
   & .plate_text {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 0.667rem;
     line-height: 150%;
     color: #000000;
     margin-top: 0;
@@ -1662,7 +1812,7 @@ hr {
 
   & .plate_text_title {
     font-weight: 500;
-    font-size: 16px;
+    font-size: 0.76rem;
     line-height: 135%;
     color: #000000;
     text-transform: none;
@@ -1672,7 +1822,7 @@ hr {
     font-family: 'Philosopher-Regular', serif;
     font-style: italic;
     font-weight: 400;
-    font-size: 48px;
+    font-size: 2.28rem;
     line-height: 130%;
     text-transform: uppercase;
     color: #CBB47A;
@@ -1703,26 +1853,26 @@ hr {
 
     & .title {
       font-weight: 700;
-      font-size: 48px;
+      font-size: 2.28rem;
       line-height: 110%;
     }
 
     & .title h2 {
       font-weight: 700;
-      font-size: 48px;
+      font-size: 2.28rem;
       line-height: 110%;
     }
   }
 
   & .sub_title {
     font-weight: 400;
-    font-size: 22px;
+    font-size: 1.05rem;
     line-height: 150%;
     padding-right: 50px;
     margin-top: 20px;
 
     &.second {
-      font-size: 16px;
+      font-size: 0.76rem;
       line-height: 150%;
       padding: 0 100px 0 0;
       margin-bottom: 0;
@@ -1755,7 +1905,7 @@ hr {
 
   & .title {
     font-weight: 700;
-    font-size: 48px;
+    font-size: 2.28rem;
     line-height: 110%;
     text-align: center;
     color: #FFFFFF;
@@ -1763,7 +1913,7 @@ hr {
 
   & .title h2 {
     font-weight: 700;
-    font-size: 48px;
+    font-size: 2.28rem;
     line-height: 110%;
     text-align: center;
     color: #FFFFFF;
@@ -1837,7 +1987,7 @@ hr {
 
       &.txt {
         font-weight: 400;
-        font-size: 16px;
+        font-size: 0.76rem;
         line-height: 150%;
         color: #212225;
         margin-bottom: 26px;
@@ -1849,7 +1999,7 @@ hr {
 
       &.accent {
         font-weight: 700;
-        font-size: 22px;
+        font-size: 1.05rem;
         line-height: 150%;
         color: #212225;
         width: 484px;
@@ -1878,7 +2028,7 @@ hr {
     & .send {
       height: 94px;
       padding: 0 63px;
-      font-size: 16px;
+      font-size: 0.76rem;
     }
   }
 }
@@ -1896,13 +2046,13 @@ hr {
 
   & .title {
     font-weight: 700;
-    font-size: 48px;
+    font-size: 2.28rem;
     line-height: 110%;
   }
 
   & .title h2 {
     font-weight: 700;
-    font-size: 48px;
+    font-size: 2.28rem;
     line-height: 110%;
   }
 
@@ -1912,7 +2062,7 @@ hr {
 
   & .subtitle {
     font-weight: 400;
-    font-size: 22px;
+    font-size: 1.05rem;
     line-height: 150%;
     margin-top: 39px;
     margin-bottom: 37px;
@@ -1920,7 +2070,7 @@ hr {
 
   & .text {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 0.76rem;
     line-height: 150%;
 
     &.left {
@@ -1968,7 +2118,7 @@ hr {
     font-family: 'Philosopher-Regular', serif;
     font-style: italic;
     font-weight: 400;
-    font-size: 48px;
+    font-size: 2.28rem;
     line-height: 130%;
     text-transform: uppercase;
     color: #CBB47A;
@@ -1997,7 +2147,7 @@ hr {
       font-family: 'TT Norms', serif;
       font-style: normal;
       font-weight: 400;
-      font-size: 24px;
+      font-size: 1.14rem;
       line-height: 140%;
       text-align: center;
       margin-top: 58px;
@@ -2006,7 +2156,7 @@ hr {
     & .send {
       height: 94px;
       padding: 0 63px;
-      font-size: 16px;
+      font-size: 0.76rem;
       width: 100%;
     }
 
@@ -2014,7 +2164,7 @@ hr {
       font-family: 'TT Norms', serif;
       font-style: normal;
       font-weight: 400;
-      font-size: 18px;
+      font-size: 0.86rem;
       line-height: 130%;
       align-items: center;
       text-align: center;
@@ -2028,7 +2178,7 @@ hr {
       border-radius: 12px;
       width: 100%;
       outline: none;
-      font-size: 20px;
+      font-size: 0.95rem;
       padding-left: 20px;
     }
 
@@ -2083,7 +2233,7 @@ hr {
       font-family: 'Philosopher-Regular', serif;
       font-style: normal;
       font-weight: 700;
-      font-size: 48px;
+      font-size: 2.28rem;
       line-height: 110%;
       color: #212225;
       margin-bottom: 32px;
@@ -2093,7 +2243,7 @@ hr {
       font-family: 'Philosopher-Regular', serif;
       font-style: normal;
       font-weight: 700;
-      font-size: 48px;
+      font-size: 2.28rem;
       line-height: 110%;
     }
 
@@ -2107,7 +2257,7 @@ hr {
     &.call {
       font-style: italic;
       font-weight: 300;
-      font-size: 18px;
+      font-size: 0.86rem;
       line-height: 150%;
       display: flex;
       align-items: center;
@@ -2117,7 +2267,7 @@ hr {
 
     &.tel, .address {
       font-weight: 400;
-      font-size: 18px;
+      font-size: 0.86rem;
       line-height: 18px;
       display: flex;
       align-items: center;
@@ -2157,7 +2307,7 @@ hr {
     font-family: 'TT Norms', serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 0.76rem;
     line-height: 150%;
     text-align: center;
     color: black;
@@ -2167,7 +2317,7 @@ hr {
 
   & .footer_address {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 0.667rem;
     line-height: 150%;
     text-align: center;
     color: #000000;
@@ -2177,7 +2327,7 @@ hr {
 
   & .tel.footer {
     font-weight: 400;
-    font-size: 18px;
+    font-size: 0.86rem;
     line-height: 18px;
     color: black;
   }
@@ -2235,6 +2385,9 @@ hr {
   padding-right: 0;
   padding-left: 0;
   max-width: 1170px !important;
+  //&.inside{
+  //  padding: 15px 0;
+  //}
 }
 
 .modal-content {
@@ -2278,7 +2431,10 @@ hr {
 .footer {
   padding-bottom: 0;
   margin-top: 0;
-  //height: 103px; //2202
+}
+
+.main_fullwidth.footer:not(.index) {
+  padding: 20px;
 }
 
 .plate.second {
@@ -2350,7 +2506,7 @@ hr {
 
 .plate_text {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 0.76rem;
   line-height: 150%;
   display: flex;
   align-items: center;
@@ -2359,7 +2515,7 @@ hr {
 
   &.head {
     font-weight: 700;
-    font-size: 20px;
+    font-size: 0.95rem;
     line-height: 150%;
     display: flex;
     align-items: flex-start;
@@ -2440,7 +2596,7 @@ hr {
   font-family: 'TT Norms', serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 0.76rem;
   line-height: 19px;
   text-align: center;
 }
@@ -2460,7 +2616,7 @@ hr {
 
   & .text2012 {
     font-weight: 500;
-    font-size: 24px;
+    font-size: 1.14rem;
     line-height: 150%;
     color: white;
     width: 487px;
@@ -2503,8 +2659,8 @@ ul {
 
 .head_title {
   font-family: Philosopher-Regular, serif;
-  font-size: 24px;
-  line-height: 20px;
+  font-size: 1.14rem;
+  line-height: 0.95rem;
 
   &.index {
 
@@ -2538,11 +2694,11 @@ ul {
     }
 
     & > span:last-child {
-      font-size: 20px;
+      font-size: 0.95rem;
     }
 
     //& > span:last-child {
-    //  font-size: 20px;
+    //  font-size: 0.95rem;
     //}
   }
 }
@@ -2550,7 +2706,7 @@ ul {
 .footer_address {
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.667rem;
   line-height: 150%;
   color: #FFFFFF;
   opacity: 0.5;
@@ -2563,7 +2719,7 @@ ul {
 .footer_title {
   font-family: Philosopher-Regular, serif;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 0.95rem;
   line-height: 28px;
   //flex-grow: 1;
   margin-left: 74px;
@@ -2621,27 +2777,27 @@ ul {
   font-family: 'TT Norms', serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 21px;
+  font-size: 1rem;
   line-height: 25px;
 
   &.footer {
     font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 0.76rem;
+    line-height: 0.9rem;
     color: #FFFFFF;
   }
 
   &.index {
     color: white;
     font-weight: 600;
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 0.86rem;
+    line-height: 0.86rem;
   }
 }
 
 .ID {
   font-weight: 300;
-  font-size: 21px;
+  font-size: 1rem;
   line-height: 25px;
   margin-top: 55px;
   margin-bottom: 25px;
@@ -2653,8 +2809,8 @@ ul {
   font-family: 'Philosopher-Regular', serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 45px;
-  line-height: 50px;
+  font-size: 2.15rem;
+  line-height: 2.38rem;
   margin-bottom: 24px;
   margin-top: 20px;
 }
@@ -2663,8 +2819,8 @@ ul {
   font-family: 'Philosopher-Regular', serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 45px;
-  line-height: 50px;
+  font-size: 2.14rem;
+  line-height: 2.14rem;
 
 }
 
@@ -2685,8 +2841,8 @@ ul {
   padding: 12px 20px;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 0.76rem;
+  line-height: 0.95rem;
   display: flex;
   align-items: center;
   height: 44px;
@@ -2696,7 +2852,7 @@ ul {
   display: none;
 }
 
-#b_keys {
+#b_keys, #b_keys_index {
   background-color: #4CA48A;
 
   &:before {
@@ -2710,7 +2866,7 @@ ul {
   }
 }
 
-#b_invest {
+#b_invest, #b_invest_index {
   background-color: #9350E9;
 
   &:before {
@@ -2724,7 +2880,7 @@ ul {
   }
 }
 
-#b_stay {
+#b_stay, #b_stay_index {
   background-color: #DF5536;
 
   &:before {
@@ -2738,7 +2894,7 @@ ul {
   }
 }
 
-#b_done {
+#b_done, #b_done_index {
   background-color: #FF7A00;
 
   &:before {
@@ -2752,7 +2908,7 @@ ul {
   }
 }
 
-#b_rassr {
+#b_rassr, #b_rassr_index {
   background-color: #A7A7A7;
 
   &:before {
@@ -2766,7 +2922,7 @@ ul {
   }
 }
 
-#b_kotlovan {
+#b_kotlovan, #b_kotlovan_index {
   background-color: #5099E9;
 
   &:before {
@@ -2887,8 +3043,8 @@ ul {
   border: 1px solid #4A86E8;
   border-radius: 12px;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 31px;
+  font-size: 1.24rem;
+  line-height: 1.48rem;
   color: #4A86E8;
   background: none !important;
 }
@@ -2960,7 +3116,7 @@ ul {
 }
 
 .small_title {
-  font-size: 35px;
+  font-size: 1.67rem;
 }
 
 .small.title_item {
@@ -2986,7 +3142,7 @@ ul {
 
 .text_benefits {
   font-weight: 300;
-  font-size: 21px;
+  font-size: 1rem;
   line-height: 150%;
 }
 
@@ -3077,7 +3233,7 @@ ul {
 
 .list {
   margin: 25px 0 3px;
-  padding: 0 30px;
+  //padding: 0 30px;
 }
 
 .form_items_parts > input,
@@ -3125,7 +3281,7 @@ ul {
   & > button {
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 0.86rem;
     line-height: 21px;
     display: flex;
     text-transform: uppercase;
@@ -3134,6 +3290,11 @@ ul {
     color: rgba(135, 134, 142, 1);
     background: none;
     border-radius: 6px;
+
+    &:active {
+      background: #1E6BE8;
+      color: white;
+    }
   }
 
   & :hover {
@@ -3176,7 +3337,7 @@ ul {
   & > label {
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 0.86rem;
     line-height: 21px;
     color: #87868E;
   }
@@ -3187,7 +3348,7 @@ ul {
   border-radius: 12px;
   color: white;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 0.95rem;
   line-height: 24px;
   height: 60px;
   border: none;
@@ -3322,7 +3483,7 @@ ul {
 .location {
   font-family: 'TT Norms', serif;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 1.14rem;
   line-height: 28px;
 }
 
@@ -3456,7 +3617,8 @@ ul {
 .mySlides_2 > img,
 .mySlides_3 > img,
 .mySlides_4 > img {
-  height: 657px;
+  //height: 657px;
+  aspect-ratio: 1.78;
   width: 100%;
   object-fit: cover;
   border-radius: 12px;
@@ -3526,100 +3688,100 @@ ul {
   position: relative;
 }
 
-.slider {
-  height: 173px;
-  margin-top: 43px;
-  overflow: hidden;
-  margin-bottom: 143px;
-}
-
-.slider ul {
-  margin: 0;
-  padding: 0;
-}
-
-.slider ul li img {
-  width: 100%;
-  height: auto;
-}
-
-.slider .bx-wrapper {
-  position: relative;
-  margin: 0 auto;
-}
-
-.bx-viewport {
-  z-index: 1;
-}
-
-.slider .bx-controls {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.slider .bx-controls-direction {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.slider .bx-controls-direction a:hover {
-  filter: brightness(90%);
-}
-
-.slider .bx-prev {
-  background: url(https://snipp.ru/demo/193/prev.png) 0 0 no-repeat;
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  margin-top: -15px;
-  top: 50%;
-  left: 25px;
-  overflow: hidden;
-  text-indent: 999px;
-  z-index: 1000;
-}
-
-.slider .bx-next {
-  background: url(https://snipp.ru/demo/193/next.png) 0 0 no-repeat;
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  margin-top: -15px;
-  top: 50%;
-  right: 25px;
-  overflow: hidden;
-  text-indent: 999px;
-  z-index: 1000;
-}
-
-.slider ul li img {
-  border-radius: 12px;
-  height: 173px;
-  width: 295px;
-}
+//.slider {
+//  height: 173px;
+//  margin-top: 43px;
+//  overflow: hidden;
+//  margin-bottom: 143px;
+//}
+//
+//.slider ul {
+//  margin: 0;
+//  padding: 0;
+//}
+//
+//.slider ul li img {
+//  width: 100%;
+//  height: auto;
+//}
+//
+//.slider .bx-wrapper {
+//  position: relative;
+//  margin: 0 auto;
+//}
+//
+//.bx-viewport {
+//  z-index: 1;
+//}
+//
+//.slider .bx-controls {
+//  position: absolute;
+//  top: 0;
+//  left: 0;
+//  right: 0;
+//  bottom: 0;
+//}
+//
+//.slider .bx-controls-direction {
+//  position: absolute;
+//  top: 0;
+//  left: 0;
+//  right: 0;
+//  bottom: 0;
+//}
+//
+//.slider .bx-controls-direction a:hover {
+//  filter: brightness(90%);
+//}
+//
+//.slider .bx-prev {
+//  background: url(https://snipp.ru/demo/193/prev.png) 0 0 no-repeat;
+//  display: inline-block;
+//  width: 30px;
+//  height: 30px;
+//  position: absolute;
+//  margin-top: -15px;
+//  top: 50%;
+//  left: 25px;
+//  overflow: hidden;
+//  text-indent: 999px;
+//  z-index: 1000;
+//}
+//
+//.slider .bx-next {
+//  background: url(https://snipp.ru/demo/193/next.png) 0 0 no-repeat;
+//  display: inline-block;
+//  width: 30px;
+//  height: 30px;
+//  position: absolute;
+//  margin-top: -15px;
+//  top: 50%;
+//  right: 25px;
+//  overflow: hidden;
+//  text-indent: 999px;
+//  z-index: 1000;
+//}
+//
+//.slider ul li img {
+//  border-radius: 12px;
+//  height: 173px;
+//  width: 295px;
+//}
 
 #term {
   margin-right: 230px;
 }
 
 @media (max-width: 1200px) {
-  .mySlides > img,
-  .mySlides_2 > img,
-  .mySlides_3 > img,
-  .mySlides_4 > img {
-    height: calc(100vw / 1.7);
-    width: 100%;
-    object-fit: cover;
-    border-radius: 12px;
-  }
+  //.mySlides > img,
+  //.mySlides_2 > img,
+  //.mySlides_3 > img,
+  //.mySlides_4 > img {
+  //  height: calc(100vw / 1.7);
+  //  width: 100%;
+  //  object-fit: cover;
+  //  border-radius: 12px;
+  //}
   .modal-content {
     padding: 0 16px;
   }
@@ -3656,7 +3818,7 @@ ul {
 
   .block_9 .wrapper_cards .cards_item.accent {
     padding: 20px 5px;
-    font-size: 20px;
+    font-size: 0.95rem;
     max-width: 427px;
   }
   .block_9_5 .text_wrapper_main {
@@ -3684,7 +3846,7 @@ ul {
 }
 
 @media (max-width: 1060px) {
-  .footer_title:not.index {
+  .footer_title:not(.index) {
     display: none;
     justify-content: center;
   }
@@ -3713,7 +3875,7 @@ ul {
   }
   .saled_button {
     font-weight: 700;
-    font-size: 16px;
+    font-size: 0.76rem;
     line-height: 19px;
     height: 43px;
     width: 100%;
@@ -3739,7 +3901,7 @@ ul {
     left: 40%;
   }
   .block_4 .cases {
-    font-size: 21px;
+    font-size: 1rem;
   }
 
   .garant + .text {
@@ -3753,11 +3915,11 @@ ul {
     font-size: 19px;
   }
   .plate_bottom.text.txt_24 {
-    font-size: 16px;
+    font-size: 0.76rem;
   }
 
   .text_benefits.w80.modalka {
-    font-size: 16px;
+    font-size: 0.76rem;
   }
   .block_2 .title.index {
     font-size: 40px !important;
@@ -3799,11 +3961,11 @@ ul {
       }
 
       & .title {
-        font-size: 24px;
+        font-size: 1.14rem;
       }
 
       & .sub_title {
-        font-size: 16px;
+        font-size: 0.76rem;
       }
     }
   }
@@ -3819,7 +3981,7 @@ ul {
 
   .saled_button {
     font-weight: 700;
-    font-size: 16px;
+    font-size: 0.76rem;
     line-height: 19px;
     height: 43px;
     width: 100%;
@@ -3837,6 +3999,9 @@ ul {
   .center.index {
     order: 3;
   }
+  .head_title:not(.index) {
+    display: none;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
@@ -3846,7 +4011,7 @@ ul {
   .data_item.mob {
     width: 33%;
   }
-  .footer_address:not.index {
+  .footer_address:not(.index) {
     display: none;
   }
   .block_1 {
@@ -3867,7 +4032,7 @@ ul {
   }
 
   .block_4 .cases {
-    font-size: 16px;
+    font-size: 0.76rem;
   }
 
   .block_3 {
@@ -3914,11 +4079,11 @@ ul {
 
   .block_7 {
     & .title_left {
-      font-size: 24px;
+      font-size: 1.14rem;
     }
 
     & .title_left h2 {
-      font-size: 24px;
+      font-size: 1.14rem;
     }
 
     .top {
@@ -3934,11 +4099,11 @@ ul {
       }
 
       & .title {
-        font-size: 24px;
+        font-size: 1.14rem;
       }
 
       & .sub_title {
-        font-size: 16px;
+        font-size: 0.76rem;
       }
     }
   }
@@ -3961,7 +4126,7 @@ ul {
     flex-direction: column;
   }
   .title.index {
-    font-size: 21px !important;
+    font-size: 1rem !important;
     margin-top: 35px !important;
   }
 
@@ -3971,7 +4136,7 @@ ul {
   }
 
   .garant {
-    font-size: 14px;
+    font-size: 0.667rem;
   }
 
   .head_title.index {
@@ -3979,7 +4144,7 @@ ul {
   }
 
   .text_benefits.w80.modalka {
-    font-size: 16px;
+    font-size: 0.76rem;
   }
   .footer.index {
     justify-content: space-around;
@@ -4031,7 +4196,7 @@ ul {
     display: flex;
     flex-direction: column;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 0.667rem;
     line-height: 17px;
   }
 
@@ -4108,7 +4273,7 @@ ul {
     background-position: center;
     height: 38px;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 0.76rem;
     line-height: 18px;
     flex-direction: row;
     padding: 0;
@@ -4140,7 +4305,7 @@ ul {
   }
   .saled_button {
     font-weight: 700;
-    font-size: 16px;
+    font-size: 0.76rem;
     line-height: 19px;
     height: 43px;
     width: 100%;
@@ -4153,7 +4318,7 @@ ul {
     justify-content: center;
   }
   .plate_bottom.text.txt_24 {
-    font-size: 16px;
+    font-size: 0.76rem;
     row-gap: 10px;
     margin-bottom: 10px;
     margin-top: 10px;
@@ -4171,7 +4336,7 @@ ul {
 @media (max-width: 575px) {
   body, html {
     font-weight: 300;
-    font-size: 14px;
+    font-size: 0.667rem;
     line-height: 17px;
   }
 
@@ -4179,7 +4344,7 @@ ul {
     padding: 0 !important;
 
     & h2 {
-      font-size: 20px;
+      font-size: 0.95rem;
     }
   }
 
@@ -4252,7 +4417,7 @@ ul {
   }
 
   .plate_bottom.text.txt_24 {
-    font-size: 16px;
+    font-size: 0.76rem;
     row-gap: 10px;
     font-weight: 700;
   }
@@ -4279,7 +4444,7 @@ ul {
 
       & .text2012 {
         font-weight: 500;
-        font-size: 16px;
+        font-size: 0.76rem;
         line-height: 150%;
       }
 
@@ -4292,7 +4457,7 @@ ul {
       width: 265px;
       height: 60px;
       font-weight: 700;
-      font-size: 12px;
+      font-size: 0.57rem;
       line-height: 12px;
     }
 
@@ -4330,7 +4495,7 @@ ul {
 
       & .plate_text {
         font-weight: 400;
-        font-size: 12px;
+        font-size: 0.57rem;
         line-height: 120%;
         display: flex;
         align-items: center;
@@ -4340,14 +4505,14 @@ ul {
 
       //& .plate_text.head {
       //  font-weight: 700;
-      //  font-size: 12px;
+      //  font-size: 0.57rem;
       //  line-height: 150%;
       //  margin-top: 0;
       //}
       //
       & .plate_text.head {
         font-weight: 700;
-        font-size: 12px;
+        font-size: 0.57rem;
         line-height: 150%;
       }
     }
@@ -4368,8 +4533,6 @@ ul {
 
     & .head_title.index.mob {
       display: block !important;
-
-
     }
   }
 
@@ -4425,7 +4588,7 @@ ul {
       & .fio {
         margin: 0;
         font-weight: 500;
-        font-size: 12px;
+        font-size: 0.57rem;
         line-height: 120%;
       }
 
@@ -4459,26 +4622,26 @@ ul {
 
     & .garant {
       font-weight: 700;
-      font-size: 12px;
+      font-size: 0.57rem;
       line-height: 150%;
       max-width: 245px;
     }
 
     & .text {
       font-weight: 400;
-      font-size: 12px;
+      font-size: 0.57rem;
       line-height: 150%;
     }
 
     & .fio {
       font-weight: 500;
-      font-size: 14px;
+      font-size: 0.667rem;
       line-height: 120%;
     }
 
     & .ceo {
       font-weight: 300;
-      font-size: 12px;
+      font-size: 0.57rem;
       line-height: 140%;
       max-width: 130px;
     }
@@ -4517,20 +4680,20 @@ ul {
 
     & .title {
       font-weight: 700;
-      font-size: 21px;
+      font-size: 1rem;
       line-height: 110%;
       margin-top: 30px;
     }
 
     & .title h2 {
       font-weight: 700;
-      font-size: 21px;
+      font-size: 1rem;
       line-height: 110%;
     }
 
     & .subtitle {
       font-weight: 700;
-      font-size: 12px;
+      font-size: 0.57rem;
       line-height: 150%;
     }
 
@@ -4550,7 +4713,7 @@ ul {
     }
 
     & #request_reccomends::placeholder {
-      font-size: 12px;
+      font-size: 0.57rem;
       text-align: center;
     }
 
@@ -4572,14 +4735,14 @@ ul {
       & .wa, .send {
         width: 100%;
         height: 55px;
-        font-size: 12px;
+        font-size: 0.57rem;
       }
 
       & input {
         text-align: center;
         padding-left: 0;
         height: 55px;
-        font-size: 12px;
+        font-size: 0.57rem;
       }
     }
   }
@@ -4614,13 +4777,13 @@ ul {
 
     & .title {
       font-weight: 700;
-      font-size: 21px;
+      font-size: 1rem;
       line-height: 110%;
     }
 
     & .title h2 {
       font-weight: 700;
-      font-size: 21px;
+      font-size: 1rem;
       line-height: 110%;
     }
 
@@ -4649,7 +4812,7 @@ ul {
 
       & .text {
         font-weight: 300;
-        font-size: 14px;
+        font-size: 0.67rem;
         line-height: 140%;
       }
 
@@ -4665,7 +4828,7 @@ ul {
 
     & .cases {
       font-weight: 300;
-      font-size: 14px;
+      font-size: 0.667rem;
       line-height: 150%;
     }
 
@@ -4690,7 +4853,7 @@ ul {
 
     & .subtitle {
       font-weight: 700;
-      font-size: 14px;
+      font-size: 0.667rem;
       line-height: 150%;
       max-width: 325px;
       margin-bottom: 25px;
@@ -4701,7 +4864,7 @@ ul {
     & .send {
       height: 55px;
       font-weight: 500;
-      font-size: 14px;
+      font-size: 0.667rem;
       line-height: 17px;
     }
   }
@@ -4709,21 +4872,21 @@ ul {
   .block_5 {
     & .title {
       font-weight: 700;
-      font-size: 21px;
+      font-size: 1rem;
       line-height: 110%;
       margin-bottom: 23px;
     }
 
     & .title h2 {
       font-weight: 700;
-      font-size: 21px;
+      font-size: 1rem;
       line-height: 110%;
       margin-bottom: 23px;
     }
 
     & .sub_title {
       font-weight: 400;
-      font-size: 14px;
+      font-size: 0.667rem;
       line-height: 150%;
       text-align: center;
     }
@@ -4734,7 +4897,7 @@ ul {
     }
 
     & .text_wrapper {
-      font-size: 12px;
+      font-size: 0.57rem;
       line-height: 150%;
     }
 
@@ -4745,7 +4908,7 @@ ul {
     & .send {
       height: 55px;
       font-weight: 500;
-      font-size: 12px;
+      font-size: 0.57rem;
       line-height: 14px;
     }
   }
@@ -4753,20 +4916,20 @@ ul {
   .block_6 {
     & .wrapper_top {
       font-weight: 400;
-      font-size: 21px;
+      font-size: 1rem;
       line-height: 110%;
     }
 
     & .wrapper_top h2 {
       font-weight: 400;
-      font-size: 21px;
+      font-size: 1rem;
       line-height: 110%;
     }
 
     & .wrapper.bottom,
     .wrapper_bottom {
       font-weight: 400;
-      font-size: 14px;
+      font-size: 0.667rem;
       line-height: 140%;
       margin-top: 23px;
       max-width: 250px;
@@ -4796,7 +4959,7 @@ ul {
       padding: 133px 0 0 20px;
     }
 
-    & #b_keys, #b_invest, #b_stay, #b_rassr, #b_done, #b_kotlovan {
+    & #b_keys_index, #b_invest_index, #b_stay_index, #b_rassr_index, #b_done_index, #b_kotlovan_index {
       height: 29px !important;
       padding: 12px 12px !important;
       font-weight: 400 !important;
@@ -4814,7 +4977,7 @@ ul {
 
     & .pictures_name {
       font-weight: 700;
-      font-size: 18px;
+      font-size: 0.86rem;
       line-height: 34px;
       text-align: center;
       color: #000000;
@@ -4823,7 +4986,7 @@ ul {
 
     & .pictures_coordinates {
       font-weight: 300;
-      font-size: 12px;
+      font-size: 0.57rem;
       line-height: 150%;
       color: #000000;
       margin-top: 4px;
@@ -4849,7 +5012,7 @@ ul {
 
     & .title_left {
       font-weight: 700;
-      font-size: 21px;
+      font-size: 1rem;
       line-height: 130%;
       text-align: center;
       margin-bottom: 14px;
@@ -4857,7 +5020,7 @@ ul {
 
     & .title_left h2 {
       font-weight: 700;
-      font-size: 21px;
+      font-size: 1rem;
       line-height: 130%;
     }
 
@@ -4875,7 +5038,7 @@ ul {
 
     & .text {
       font-weight: 500;
-      font-size: 14px;
+      font-size: 0.667rem;
       line-height: 150%;
     }
 
@@ -4900,19 +5063,19 @@ ul {
 
       & .send {
         height: 55px;
-        font-size: 12px;
+        font-size: 0.57rem;
         padding: 0;
       }
 
       & input {
         height: 55px;
-        font-size: 12px;
+        font-size: 0.57rem;
         border: none;
         font-weight: 300;
       }
 
       & input::placeholder {
-        font-size: 12px;
+        font-size: 0.57rem;
         text-align: center;
       }
 
@@ -4921,7 +5084,7 @@ ul {
       }
 
       & .text {
-        font-size: 12px;
+        font-size: 0.57rem;
         margin-top: 17px;
       }
 
@@ -4933,7 +5096,7 @@ ul {
       }
 
       font-weight: 400;
-      font-size: 16px;
+      font-size: 0.76rem;
       line-height: 140%;
 
       & .form_wrapper {
@@ -4982,7 +5145,7 @@ ul {
 
       & .text {
         font-weight: 500;
-        font-size: 12px;
+        font-size: 0.57rem;
         line-height: 150%;
         text-align: center;
         position: relative;
@@ -4994,20 +5157,20 @@ ul {
 
       & .cashback {
         font-weight: 700;
-        font-size: 12px;
+        font-size: 0.57rem;
         line-height: 150%;
         margin-top: 17px;
       }
 
       & .title {
         font-weight: 700;
-        font-size: 21px;
+        font-size: 1rem;
         line-height: 110%;
       }
 
       & .sub_title {
         font-weight: 400;
-        font-size: 12px;
+        font-size: 0.57rem;
         line-height: 150%;
         margin-top: 8px;
       }
@@ -5027,19 +5190,19 @@ ul {
 
         & .send {
           height: 55px;
-          font-size: 12px;
+          font-size: 0.57rem;
           padding: 0;
         }
 
         & input {
           height: 55px;
-          font-size: 12px;
+          font-size: 0.57rem;
           border: none;
           font-weight: 300;
         }
 
         & input::placeholder {
-          font-size: 12px;
+          font-size: 0.57rem;
           text-align: center;
         }
       }
@@ -5072,20 +5235,20 @@ ul {
 
       & .title {
         font-weight: 700;
-        font-size: 21px;
+        font-size: 1rem;
         line-height: 110%;
       }
 
       & .sub_title {
         font-weight: 400;
-        font-size: 14px;
+        font-size: 0.67rem;
         line-height: 150%;
         padding-right: 0;
 
         &.second {
           & .txt {
             font-weight: 400;
-            font-size: 12px;
+            font-size: 0.57rem;
             line-height: 150%;
           }
         }
@@ -5123,13 +5286,13 @@ ul {
 
     & .plate_text_title {
       font-weight: 500;
-      font-size: 14px;
+      font-size: 0.667rem;
       line-height: 135%;
     }
 
     & .plate_text {
       font-weight: 400;
-      font-size: 12px;
+      font-size: 0.57rem;
       line-height: 150%;
     }
 
@@ -5140,11 +5303,11 @@ ul {
     & .controls {
       .send {
         height: 55px;
-        font-size: 12px;
+        font-size: 0.57rem;
       }
 
       & input {
-        font-size: 12px;
+        font-size: 0.57rem;
         height: 55px;
         text-align: center;
       }
@@ -5152,13 +5315,13 @@ ul {
 
     & input {
       height: 55px;
-      font-size: 12px;
+      font-size: 0.57rem;
       border: none;
       font-weight: 300;
     }
 
     & input::placeholder {
-      font-size: 12px;
+      font-size: 0.57rem;
     }
 
     & .center {
@@ -5172,7 +5335,7 @@ ul {
 
       & .send {
         height: 55px;
-        font-size: 12px;
+        font-size: 0.57rem;
       }
 
       & .cards {
@@ -5193,7 +5356,7 @@ ul {
         width: 300px;
         display: block;
         font-weight: 700;
-        font-size: 14px;
+        font-size: 0.67rem;
         line-height: 150%;
         padding: 15px 8px;
         margin-top: -15px;
@@ -5203,13 +5366,13 @@ ul {
       & .cards_item {
         &.title {
           font-weight: 400;
-          font-size: 18px;
+          font-size: 0.86rem;
           line-height: 140%;
         }
 
         &.txt {
           font-weight: 400;
-          font-size: 12px;
+          font-size: 0.57rem;
           line-height: 150%;
           margin-bottom: 19px;
         }
@@ -5218,20 +5381,20 @@ ul {
 
     & .title {
       font-weight: 700;
-      font-size: 21px;
+      font-size: 1rem;
       line-height: 110%;
     }
 
     & input {
       height: 55px;
-      font-size: 12px;
+      font-size: 0.57rem;
       border: none;
       font-weight: 300;
       text-align: center;
     }
 
     & input::placeholder {
-      font-size: 12px;
+      font-size: 0.57rem;
     }
   }
 
@@ -5239,7 +5402,7 @@ ul {
     & .text.left {
       & .title {
         font-weight: 700;
-        font-size: 21px;
+        font-size: 1rem;
         line-height: 110%;
         text-align: center;
         max-width: 100%;
@@ -5268,7 +5431,7 @@ ul {
 
     & .subtitle {
       font-weight: 400;
-      font-size: 16px;
+      font-size: 0.76rem;
       line-height: 140%;
       margin-top: 15px;
       margin-bottom: 23px;
@@ -5277,7 +5440,7 @@ ul {
 
     & .text {
       font-weight: 400;
-      font-size: 14px;
+      font-size: 0.667rem;
       line-height: 150%;
     }
 
@@ -5289,7 +5452,7 @@ ul {
 
       & .title {
         font-weight: 400 !important;
-        font-size: 21px !important;
+        font-size: 1rem !important;
         line-height: 140% !important;
         margin-top: 20px;
         margin-bottom: 35px;
@@ -5297,18 +5460,18 @@ ul {
 
       & input {
         height: 55px;
-        font-size: 12px;
+        font-size: 0.57rem;
         font-weight: 300;
         text-align: center;
       }
 
       & input::placeholder {
-        font-size: 12px;
+        font-size: 0.57rem;
       }
 
       & .send {
         height: 55px;
-        font-size: 12px;
+        font-size: 0.57rem;
       }
 
       & .form_items {
@@ -5317,7 +5480,7 @@ ul {
 
       & .text {
         font-weight: 400;
-        font-size: 12px;
+        font-size: 0.57rem;
         line-height: 130%;
         margin-top: 20px;
       }
@@ -5340,14 +5503,14 @@ ul {
 
       &.question {
         font-weight: 700;
-        font-size: 21px;
+        font-size: 1rem;
         line-height: 110%;
         margin-bottom: 15px;
       }
 
       &.question h2 {
         font-weight: 700;
-        font-size: 21px;
+        font-size: 1rem;
         line-height: 110%;
         margin-bottom: 15px;
       }
@@ -5406,13 +5569,24 @@ ul {
 
         & .footer_title {
           font-weight: 700;
-          font-size: 14px;
+          font-size: 0.67rem;
           line-height: 150%;
           margin-bottom: 10px;
         }
       }
     }
   }
+
+  .main_fullwidth.footer:not(.index) {
+    & .footer {
+      display: none;
+    }
+
+    & .footer_mob {
+      display: block;
+    }
+  }
+
   .tel.footer.index {
     height: unset !important;
   }
@@ -5427,7 +5601,7 @@ ul {
     font-family: 'TT Norms', serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 0.667rem;
     line-height: 17px;
 
     &.index {
@@ -5438,10 +5612,22 @@ ul {
     &.footer {
       font-style: normal;
       font-weight: 400;
-      font-size: 14px;
+      font-size: 0.667rem;
       line-height: 17px;
       color: #FFFFFF;
     }
+  }
+
+  #b_keys, #b_invest, #b_stay, #b_rassr, #b_done, #b_kotlovan {
+    border-radius: 6px;
+    padding: 12px 20px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.57rem;
+    line-height: 13px;
+    display: flex;
+    align-items: center;
+    height: 29px;
   }
 
   .parent {
@@ -5478,7 +5664,7 @@ ul {
     column-gap: 5px;
   }
   .text_benefits.w80.modalka {
-    font-size: 16px;
+    font-size: 0.76rem;
   }
   .benefits_row_modal.modalka {
     flex-direction: column;
@@ -5521,7 +5707,7 @@ ul {
 
   .ID {
     font-weight: 300;
-    font-size: 14px;
+    font-size: 0.667rem;
     line-height: 17px;
     margin-top: 20px;
     margin-bottom: 0;
@@ -5578,7 +5764,7 @@ ul {
 
   .location {
     font-weight: 700;
-    font-size: 16px;
+    font-size: 0.76rem;
     line-height: 19px;
   }
 
@@ -5594,7 +5780,7 @@ ul {
     display: flex;
     flex-direction: column;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 0.667rem;
     line-height: 17px;
   }
 
@@ -5622,7 +5808,7 @@ ul {
 
   .text.w80.blue.bold {
     font-weight: 700;
-    font-size: 14px;
+    font-size: 0.667rem;
     line-height: 150%;
   }
 
@@ -5691,7 +5877,7 @@ ul {
     background-image: url(../images/6181_mob.svg);
     height: 38px;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 0.76rem;
     line-height: 18px;
     flex-direction: row;
     padding: 0;
@@ -5755,29 +5941,59 @@ ul {
 
   .tel_footer_mob {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 0.667rem;
     line-height: 17px;
     color: #FFFFFF;
   }
 
-  .footer_title_mob {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 100%;
-    color: #FFFFFF;
-    display: flex;
-    justify-content: center;
-    margin: 23px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    padding-bottom: 27px;
+  .main_fullwidth.footer.index {
+    & .footer_title_mob {
+      font-weight: 400;
+      font-size: 0.76rem;
+      line-height: 100%;
+      color: #FFFFFF;
+      display: flex;
+      justify-content: center;
+      margin: 23px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      padding-bottom: 27px;
+    }
   }
 
-  .footer_address_mob {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 15px;
-    color: #FFFFFF;
-    opacity: 0.5;
+  .main_fullwidth.footer:not(.index) {
+    & .footer_title_mob {
+      font-family: 'Philosopher-Regular', serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 0.76rem;
+      line-height: 100%;
+      color: #FFFFFF;
+      display: flex;
+      justify-content: center;
+      margin: 23px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      padding-bottom: 27px;
+    }
+  }
+
+  .main_fullwidth.footer.index {
+    & .footer_address_mob {
+      font-weight: 400;
+      font-size: 0.667rem;
+      line-height: 15px;
+      color: #FFFFFF;
+      opacity: 0.5;
+    }
+  }
+
+  .main_fullwidth.footer:not(.index) {
+    & .footer_address_mob {
+      font-weight: 400;
+      font-size: 0.57rem;
+      line-height: 125%;
+      color: #FFFFFF;
+      opacity: 0.5;
+    }
   }
 
   .contacts {
@@ -5802,7 +6018,7 @@ ul {
 
   .stage.txt_24 {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 0.76rem;
     line-height: 19px;
   }
 
@@ -5859,7 +6075,7 @@ ul {
     width: 100%;
     height: 43px;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 0.76rem;
     line-height: 19px;
   }
 
@@ -5871,6 +6087,10 @@ ul {
 
   .main_fullwidth {
     padding: 0 16px;
+
+    &.footer {
+      padding: 20px 30px;
+    }
   }
 
   .telegram_picture {
@@ -5943,7 +6163,7 @@ ul {
 
   .km {
     font-weight: 700;
-    font-size: 14px;
+    font-size: 0.667rem;
     line-height: 17px;
     transform: translateY(25px);
   }
@@ -5959,7 +6179,7 @@ ul {
       height: 45px;
       width: 100%;
       font-weight: 400;
-      font-size: 14px;
+      font-size: 0.667rem;
       line-height: 17px;
       color: #87868E;
     }
@@ -5968,7 +6188,7 @@ ul {
       height: 45px;
       width: 100%;
       font-weight: 400;
-      font-size: 14px;
+      font-size: 0.667rem;
       line-height: 17px;
       color: #87868E;
 
@@ -5984,7 +6204,7 @@ ul {
 
   .send {
     font-weight: 700;
-    font-size: 16px;
+    font-size: 0.76rem;
     line-height: 19px;
     height: 43px;
     width: 100%;
@@ -6000,7 +6220,7 @@ ul {
     & > button {
       font-style: normal;
       font-weight: 400;
-      font-size: 12px;
+      font-size: 0.57rem;
       line-height: 14px;
       padding: 4px 7px;
     }
@@ -6028,7 +6248,7 @@ ul {
 
   .text_benefits {
     font-weight: 300;
-    font-size: 14px;
+    font-size: 0.667rem;
     line-height: 150%;
   }
 
@@ -6127,57 +6347,59 @@ ul {
     font-size: 10px;
     line-height: 12px;
   }
+  //Это включить после отправки
+  //.mySlides > img,
+  //.mySlides_2 > img,
+  //.mySlides_3 > img,
+  //.mySlides_4 > img {
+  //  height: unset;
+  //  width: 100%;
+  //  object-fit: cover;
+  //  border-radius: 12px;
+  //}
+  //
+  //.mySlides, .mySlides_2, .mySlides_3, .mySlides_4 {
+  //  margin-bottom: 0;
+  //}
+  //
+  //.slider .bx-prev, .prev {
+  //  background: url(https://snipp.ru/demo/193/prev.png) 0 0 no-repeat;
+  //  display: inline-block;
+  //  width: 30px;
+  //  height: 30px;
+  //  position: absolute;
+  //  margin-top: -17px;
+  //  top: 50%;
+  //  left: 13px;
+  //  overflow: hidden;
+  //  text-indent: 999px;
+  //  z-index: 1000;
+  //  margin-left: 0
+  //}
+  //
+  //.slider .bx-next, .next {
+  //  background: url(https://snipp.ru/demo/193/next.png) 0 0 no-repeat;
+  //  display: inline-block;
+  //  width: 30px;
+  //  height: 30px;
+  //  position: absolute;
+  //  margin-top: -17px;
+  //  top: 50%;
+  //  right: 5px;
+  //  overflow: hidden;
+  //  text-indent: 999px;
+  //  z-index: 1000;
+  //  margin-right: 0;
+  //}
 
-  .mySlides > img,
-  .mySlides_2 > img,
-  .mySlides_3 > img,
-  .mySlides_4 > img {
-    height: unset;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 12px;
-  }
-
-  .mySlides, .mySlides_2, .mySlides_3, .mySlides_4 {
-    margin-bottom: 0;
-  }
-
-  .slider .bx-prev, .prev {
-    background: url(https://snipp.ru/demo/193/prev.png) 0 0 no-repeat;
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    margin-top: -17px;
-    top: 50%;
-    left: 13px;
-    overflow: hidden;
-    text-indent: 999px;
-    z-index: 1000;
-    margin-left: 0
-  }
-
-  .slider .bx-next, .next {
-    background: url(https://snipp.ru/demo/193/next.png) 0 0 no-repeat;
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    margin-top: -17px;
-    top: 50%;
-    right: 5px;
-    overflow: hidden;
-    text-indent: 999px;
-    z-index: 1000;
-    margin-right: 0;
-  }
+  //Это включить после отправки
 
   .txt_24 {
-    font-size: 14px;
+    font-size: 0.667rem;
   }
 
   .txt_16 {
-    font-size: 16px;
+    font-size: 0.76rem;
     line-height: 19px;
   }
 
@@ -6187,7 +6409,7 @@ ul {
 
   .saled_button {
     font-weight: 700;
-    font-size: 16px;
+    font-size: 0.76rem;
     line-height: 19px;
     height: 43px;
     width: 100%;
@@ -6200,168 +6422,4 @@ ul {
     align-items: center;
     justify-content: center;
   }
-}
-
-.slick-slider {
-  position: relative;
-  display: block;
-  box-sizing: border-box;
-  user-select: none;
-  -webkit-touch-callout: none;
-  -khtml-user-select: none;
-  -ms-touch-action: pan-y;
-  touch-action: pan-y;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.slick-list {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-}
-
-.slick-list:focus {
-  outline: none;
-}
-
-.slick-list.dragging {
-  cursor: hand;
-}
-
-.slick-slider .slick-track, .slick-slider .slick-list {
-  transform: translate3d(0, 0, 0);
-}
-
-.slick-track {
-  position: relative;
-  top: 0;
-  left: 0;
-  display: block;
-}
-
-.slick-track:before, .slick-track:after {
-  display: table;
-  content: '';
-}
-
-.slick-track:after {
-  clear: both;
-}
-
-.slick-loading .slick-track {
-  visibility: hidden;
-}
-
-.slick-slide {
-  display: none;
-  float: left;
-  height: 100%;
-  min-height: 1px;
-}
-
-.slick-slide img {
-  display: block;
-}
-
-.slick-slide.slick-loading img {
-  display: none;
-}
-
-.slick-slide.dragging img {
-  pointer-events: none;
-}
-
-.slick-initialized .slick-slide {
-  display: block;
-}
-
-.slick-loading .slick-slide {
-  visibility: hidden;
-}
-
-.slick-vertical .slick-slide {
-  display: block;
-  height: auto;
-  border: 1px solid transparent;
-}
-
-.slick-btn.slick-hidden {
-  display: none;
-}
-
-.slick-prev, .slick-next {
-  font-size: 0;
-  line-height: 0;
-  position: absolute;
-  top: 40%;
-  display: block;
-  width: 20px;
-  height: 20px;
-  padding: 0;
-  transform: translate(0, -50%);
-  cursor: pointer;
-  color: transparent;
-  border: none;
-  outline: none;
-  background: transparent;
-}
-
-.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus, {
-  color: transparent;
-  outline: none;
-}
-
-.slick-prev:hover:before, .slick-prev:focus:before, .slick-next:hover:before, .slick-next:focus:before {
-  opacity: 0;
-}
-
-.slick-prev:before, .slick-next:before {
-  font-family: "FontAwesome";
-  font-size: 40px;
-  line-height: 1;
-  color: transparent;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.slick-prev {
-  cursor: pointer;
-  position: absolute;
-  top: -81px;
-  font-size: 25px;
-  border-radius: 50px;
-  user-select: none;
-  -webkit-user-select: none;
-  margin-left: 52px;
-  width: 71px;
-  height: 71px;
-  padding: 15px 18px;
-  text-align: center;
-  right: 88px;
-}
-
-.slick-prev:before {
-  //content: "";
-}
-
-.slick-next {
-  cursor: pointer;
-  position: absolute;
-  top: -81px;
-  font-size: 25px;
-  border-radius: 50px;
-  user-select: none;
-  -webkit-user-select: none;
-  margin-left: 52px;
-  width: 71px;
-  height: 71px;
-  padding: 15px 18px;
-  text-align: center;
-  right: 0;
-}
-
-.slick-next:before {
-  content: "\f178";
 }
